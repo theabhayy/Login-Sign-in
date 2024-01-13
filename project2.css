@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(apple-logo-7680x4320-16930.jpeg);
+    background-size:cover;
+    background-position: center;
+
+}
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    padding:20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo{
+    font-size: 30px;
+    color: skyblue;
+    user-select: none;
+}
+
+.navigation a{
+    position: relative;
+    font-size: 1.1em;
+    color: azure;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+.navigation a::after{
+    content: '';
+    position:absolute;
+    width: 100%;
+    height: 3px;
+    background: azure;
+    border-radius: 5px;
+    left: 0;
+    bottom: -6px;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+.navigation a:hover::after{
+    transform:scaleX(1);
+}
+.navigation .btnLogin-popup{
+    width: 100px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid azure;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: azure;
+    margin-left: 40px;
+    transition: 0.3s;
+}
+.navigation .btnLogin-popup:hover{
+    background-color: azure;
+    color:black;
+}
+.wrapper{
+    position: relative;
+    top: 53px;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 0 0 30px rgba(0,0,0,.5);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.wrapper .form-box{
+    width: 100%;
+    padding: 40px;
+}
+.wrapper .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background: antiquewhite;
+    font-size: 2em;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index:1;
+
+}
+.form-box h2{
+    font-size: 2em;
+    color: azure;
+    text-align: center;
+}
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid rgb(108, 106, 106);
+    margin: 30px 0;
+}
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: azure;
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: beige;
+    font-weight: 600;
+    padding: auto;
+}
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: rgb(196, 184, 255);
+    line-height: 57px;
+}
+.remember-forget{
+    font-size: .9em;
+    color: bisque;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.remember-forget label input{
+    accent-color: white;
+    margin-right: 3px;
+}
+.remember-forget a {
+    color: azure;
+    text-decoration: none;
+}
+.remember-forget a:hover{
+    text-decoration: underline;
+}
+.btn{
+    width: 100%;
+    height: 45px;
+    background: whitesmoke;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: black;
+    font-weight: 500;
+}
+.login-register{
+    font-size: .9em;
+    color: aliceblue;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+.login-register p a {
+    color: antiquewhite;
+    text-decoration: none;
+    font-weight: 600;
+}
+.login-register p a:hover{
+    text-decoration: underline;
+}
